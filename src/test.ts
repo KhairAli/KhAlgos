@@ -1,17 +1,29 @@
 import { Binary } from './binary/binary';
 import { LinkList } from './link-list/link-list';
 import { Stack } from './stack/stack';
+import { HashMap } from './map/hash-map';
+import { HashChaining } from './map/hash-chain';
 
 export class Test {
   private binary: Binary;
   private list: LinkList;
   private stack: Stack;
+  private map: HashMap;
   constructor() {
-    this.runStack();
+    this.runMap();
   }
 
+  public runMap(): void {
+    this.map = new HashChaining();
+    this.map.put('1', 'ALi');
+    this.map.put('1', 'Khan');
+    this.map.put('2', 'imran');
+    let a = this.map.get('4');
+    let b = this.map.get('2');
+    console.log(a,b)
+  }
 
-  public runStack(){
+  public runStack() {
     this.stack = new Stack();
     this.stack.push(1);
     this.stack.push(2);
@@ -21,7 +33,7 @@ export class Test {
     this.stack.push(6);
     this.stack.pop();
     this.stack.print();
-    console.log(this.stack.size())
+    console.log(this.stack.size());
   }
 
   public runLinkList() {
