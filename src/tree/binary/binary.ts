@@ -1,5 +1,5 @@
 import { TreeNodeImpl, TreeNode } from './tree-node';
-import { hasValue } from '../util';
+import { hasValue } from '../../util';
 
 export class Binary {
   private root = null;

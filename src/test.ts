@@ -1,8 +1,8 @@
-import { Binary } from './binary/binary';
 import { LinkList } from './link-list/link-list';
 import { Stack } from './stack/stack';
 import { HashMap } from './map/hash-map';
 import { HashChaining } from './map/hash-chain';
+import { Binary } from './tree/binary/binary';
 
 export class Test {
   private binary: Binary;
@@ -20,7 +20,7 @@ export class Test {
     this.map.put('2', 'imran');
     let a = this.map.get('4');
     let b = this.map.get('2');
-    console.log(a,b)
+    console.log(a, b);
   }
 
   public runStack() {
