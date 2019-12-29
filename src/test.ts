@@ -3,14 +3,25 @@ import { Stack } from './stack/stack';
 import { HashMap } from './map/hash-map';
 import { HashChaining } from './map/hash-chain';
 import { Binary } from './tree/binary/binary';
+import { AVLTree } from './tree/avl/avl-tree';
 
 export class Test {
   private binary: Binary;
   private list: LinkList;
   private stack: Stack;
   private map: HashMap;
+  private avl: AVLTree<number>;
   constructor() {
-    this.runMap();
+    this.runAvlTree();
+  }
+
+  public runAvlTree(): void {
+    this.avl = new AVLTree();
+    let root = null;
+    root = this.avl.insert(1, root);
+    root = this.avl.insert(2, root);
+    root = this.avl.insert(3, root);
+    console.log(root);
   }
 
   public runMap(): void {
